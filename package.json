@@ -1,5 +1,5 @@
 {
-  "name": "@xialeistudio/push-nodejs",
+  "name": "@xialeistudio/baidu-push",
   "version": "0.0.1",
   "description": "baidu push for nodejs",
   "main": "index.js",

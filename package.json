@@ -1,6 +1,6 @@
 {
   "name": "@xialeistudio/baidu-push",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "baidu push for nodejs",
   "main": "index.js",
   "types": "index.d.ts",

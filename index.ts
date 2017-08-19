@@ -188,7 +188,7 @@ export class Push {
      * @returns {object}
      */
     private prepareRequest(name: string, data?: any) {
-        data.apiKey = this.apiKey;
+        data.apikey = this.apiKey;
         data.timestamp = parseInt((Date.now() / 1000).toString(), 10);
         data.sign = this.signRequest(name, data);
         return data;

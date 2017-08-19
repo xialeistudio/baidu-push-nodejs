@@ -1,6 +1,6 @@
 {
   "name": "@xialeistudio/baidu-push",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "baidu push for nodejs",
   "main": "index.js",
   "types": "index.d.ts",
@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/xialeistudio/baidu-push-nodejs#readme",
   "dependencies": {
-    "node-fetch": "^1.7.1"
+    "node-fetch": "^1.7.2"
   },
   "devDependencies": {
     "@types/node": "^7.0.31",

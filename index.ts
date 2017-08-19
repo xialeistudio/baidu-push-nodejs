@@ -50,6 +50,7 @@ export namespace message {
         notification_basic_style: number;
         custom_content: any;
     }
+
     export interface iOS {
         aps: {
             alert: string,
@@ -106,7 +107,7 @@ export class Push {
      * @returns {string}
      */
     private static buildUserAgent(): string {
-        const pkgInfo = require('./pagkage.json');
+        const pkgInfo = require(__dirname + '/package.json');
         return `BCCS_SDK/3.0 (${os.type()}; ${os.release()}; ${os.arch()}; NodeJs/${process.version} ${pkgInfo.name}/${pkgInfo.version})`;
     }
 
@@ -208,7 +209,8 @@ export class Push {
                 'Content-Type': Push.buildContentType(),
                 'User-Agent': Push.buildUserAgent(),
                 'Content-Length': body.length.toString(),
-            }
+            },
+            timeout: 10000
         };
         const response = await fetch(`${Push.baseURL()}${name}`, opts);
         const json = await response.json();

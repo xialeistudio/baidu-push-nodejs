@@ -137,7 +137,7 @@ var Push = (function () {
      * @returns {string}
      */
     Push.buildUserAgent = function () {
-        var pkgInfo = require('./pagkage.json');
+        var pkgInfo = require(__dirname + '/package.json');
         return "BCCS_SDK/3.0 (" + os.type() + "; " + os.release() + "; " + os.arch() + "; NodeJs/" + process.version + " " + pkgInfo.name + "/" + pkgInfo.version + ")";
     };
     /**
@@ -227,7 +227,8 @@ var Push = (function () {
                                 'Content-Type': Push.buildContentType(),
                                 'User-Agent': Push.buildUserAgent(),
                                 'Content-Length': body.length.toString(),
-                            }
+                            },
+                            timeout: 10000
                         };
                         return [4 /*yield*/, node_fetch_1.default("" + Push.baseURL() + name, opts)];
                     case 1:

@@ -228,7 +228,8 @@ var Push = (function () {
                                 'User-Agent': Push.buildUserAgent(),
                                 'Content-Length': body.length.toString(),
                             },
-                            timeout: 10000
+                            timeout: 10000,
+                            body: body
                         };
                         return [4 /*yield*/, node_fetch_1.default("" + Push.baseURL() + name, opts)];
                     case 1:

@@ -210,7 +210,8 @@ export class Push {
                 'User-Agent': Push.buildUserAgent(),
                 'Content-Length': body.length.toString(),
             },
-            timeout: 10000
+            timeout: 10000,
+            body
         };
         const response = await fetch(`${Push.baseURL()}${name}`, opts);
         const json = await response.json();
